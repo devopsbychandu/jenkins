@@ -7,7 +7,7 @@ pipeline {
         stage("sourcecodecheckout") {
             steps {
                 checkout scm
-                echo $tag
+                echo ${tag}
             }
         }
     }
