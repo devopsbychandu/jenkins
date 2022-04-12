@@ -3,9 +3,7 @@ pipeline {
     stages {
         stage {
             steps {
-                script {
-                    git describe --tags --abbrev=0
-                }
+                git describe --tags --abbrev=1
             }
         }
     }
