@@ -1,4 +1,4 @@
-def tag = git describe --tags --abbrev=1
+def tag = "git describe --tags --abbrev=1"
 pipeline {
     agent any
     stages {
