@@ -4,8 +4,7 @@ pipeline {
         stage("sourcecodecheckout") {
             steps {
                 checkout scm
-                demo=$(git describe --tags --abbrev=0)
-                echo $demo
+                sh(returnStdout: true, script: "git tag --sort version:refname | tail -1").trim()
             }
         }
     }
