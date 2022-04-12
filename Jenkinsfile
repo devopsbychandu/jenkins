@@ -5,7 +5,7 @@ pipeline {
         stage("sourcecodecheckout") {
             steps {
                 checkout scm
-                tag = "git describe --tags --abbrev=1"
+                tag = $"git describe --tags --abbrev=1"
             }
         }
     }
