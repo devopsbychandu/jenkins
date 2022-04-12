@@ -5,8 +5,6 @@ pipeline {
         stage("sourcecodecheckout") {
             steps {
                 checkout scm
-                chmod +x tag.sh
-                ./tag.sh
             }
         }
     }
