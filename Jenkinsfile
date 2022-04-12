@@ -1,6 +1,6 @@
+def tag
 pipeline {
     agent any
-    def tag
     stages {
         stage("sourcecodecheckout") {
             steps {
