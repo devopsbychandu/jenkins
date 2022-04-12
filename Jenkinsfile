@@ -1,10 +1,10 @@
+def tag = git describe --tags --abbrev=1
 pipeline {
     agent any
     stages {
         stage("sourcecodecheckout") {
-            steps {
+            step {
                 checkout scm
-                git describe --tags --abbrev=1
             }
         }
     }
