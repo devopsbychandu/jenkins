@@ -3,7 +3,7 @@ pipeline {
     agent any
     stages {
         stage("sourcecodecheckout") {
-            step {
+            steps {
                 checkout scm
                 script {
                     sh echo ${tag}
