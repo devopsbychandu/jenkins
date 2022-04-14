@@ -5,10 +5,14 @@ pipeline {
         stage("sourcecodecheckout") {
             steps {
                 checkout scm
+            }
+        }
+        stage("tag") {
+            steps {
                 script {
                     tag = load "script.groovy"
                     tag.tag()
-                }
+                }               
             }
         }
     }
