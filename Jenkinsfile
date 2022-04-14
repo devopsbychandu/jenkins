@@ -1,4 +1,4 @@
-def tag = load "script.groovy"
+def tag
 pipeline {
     agent any
     stages {
@@ -10,6 +10,7 @@ pipeline {
         stage("tag") {
             steps {
                 script {
+                    tag = load "script.groovy"
                     tag.tag()
                 }               
             }
