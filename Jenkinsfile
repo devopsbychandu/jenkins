@@ -7,6 +7,7 @@ pipeline {
                 checkout scm
                 script {
                     tag = load "script.groovy"
+                    tag.tag()
                 }
             }
         }
