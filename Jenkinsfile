@@ -16,9 +16,6 @@ pipeline {
                     return gitTag;
                 }
             }
-            steps {
-                // ... do something only if there's a tag on this particular commit
-            }
         }
     }
 }
