@@ -10,12 +10,5 @@ pipeline {
                 }
             }
         }
-        stage('If tagged') {
-            when {
-                expression {
-                    return gitTag;
-                }
-            }
-        }
     }
 }
