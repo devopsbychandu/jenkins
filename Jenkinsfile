@@ -1,4 +1,4 @@
-def gitTag = null
+def gitTag
 pipeline {
     agent any
     stages {
