@@ -1,4 +1,4 @@
-def tag
+def latestTag
 pipeline {
     agent any
     stages {
@@ -10,8 +10,7 @@ pipeline {
         stage("tag") {
             steps {
                 script {
-                    tag = load "script.groovy"
-                    tag.tag()
+                    latestTag = sh(returnStdout:  true, script: "git tag --sort=-creatordate | head -n 1").trim()
                 }               
             }
         }
