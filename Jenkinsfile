@@ -1,4 +1,3 @@
-def latestTag
 pipeline {
     agent any
     stages {
