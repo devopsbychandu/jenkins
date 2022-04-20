@@ -10,8 +10,12 @@ pipeline {
                     // env.BUILD_VERSION = latestTag
                     // echo "env-BUILD_VERSION"
                     // echo "${env.BUILD_VERSION}"
-                    echo latestTag
                 }
+            }
+        }
+        stage("latesttag") {
+            steps {
+                echo latestTag
             }
         }
     }
