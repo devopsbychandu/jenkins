@@ -6,7 +6,10 @@ pipeline {
             steps {
                 checkout scm
                 script {
-                    gitTag=sh(returnStdout: true, script: "git tag --contains | head -1").trim()
+                    latestTag = sh(returnStdout:  true, script: "git tag --sort=-creatordate | head -n 1").trim()
+                    env.BUILD_VERSION = latestTag
+                    echo "env-BUILD_VERSION"
+                    echo "${env.BUILD_VERSION}"
                 }
             }
         }
