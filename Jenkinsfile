@@ -1,4 +1,4 @@
-def gitTag
+def latestTag
 pipeline {
     agent any
     stages {
