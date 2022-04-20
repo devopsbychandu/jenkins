@@ -4,6 +4,7 @@ services:
     # image: ${docker-registry}/my-app:1.0
     # ports:
      # - 3000:3000
+     # -slfkpsdo
   mongodb:
     image: mongo
     ports:
