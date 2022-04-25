@@ -1,2 +1,2 @@
 git remote -v
-cd ./jenkins/
+git remote rm origin
